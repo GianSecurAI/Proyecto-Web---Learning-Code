@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href= "main.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="forms.css"> 
+    <title>Consultas, quejas y/o reclamos - Learning Code</title>
+</head>
+<body>
+    <div class="formulario-container">
+        <div class="formulario-header">
+            <a href="javascript:history.back()" class="volver-btn">← Volver</a>
+            <h1>Datos personales</h1>
+        </div>
+        <form id="consultaForm" class="formulario">
+            <p>Por favor ingrese su nombre y su solicitud</p>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            <textarea id="solicitud" name="solicitud" placeholder="Diligencie su solicitud" required></textarea>
+            <div class="checkbox-container">
+                <input type="checkbox" id="confirmacion" name="confirmacion" required>
+                <label for="confirmacion">Confirmo que la información diligenciada en este apartado es correcta</label>
+            </div>
+            <button type="submit" class="enviar-btn">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('consultaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Formulario enviado con éxito');
+            window.location.href = 'index.html'; // Redirige a la página principal
+        });
+    </script>
+</body>
+</html>

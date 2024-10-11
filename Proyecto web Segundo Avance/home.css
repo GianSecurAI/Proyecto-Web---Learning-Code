@@ -1,0 +1,214 @@
+/* Principal Section */
+.principal {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 1rem; /* Cambiado a unidades relativas para escalabilidad */
+  text-align: center;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 1300px;
+  font-size: 1.75rem; /* Cambiado a rem para mayor escalabilidad */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s ease;
+}
+
+.principal:hover {
+  background-color: #1abc9c;
+}
+
+.destacados {
+  padding: 5px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.75rem; /* Cambiado a rem para escalabilidad */
+  color: var(--secondary-color);
+}
+
+/* Courses Section */
+.cursos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.curso {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.curso:hover {
+  transform: translateY(-5px);
+}
+
+.curso img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: -8px;
+  transition: transform 0.6s ease;
+}
+
+.curso:hover img {
+  transform: rotateY(360deg);
+}
+
+/* Learning Paths Section */
+.rutas {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 60px 0;
+  flex-wrap: wrap;
+}
+
+.ruta {
+  background-color: white;
+  padding: 2rem; /* Cambiado a rem para mejor escalabilidad */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.ruta:hover {
+  transform: scale(1.05);
+}
+.ruta img {
+  width: 100%; /* Esto hará que las imágenes ocupen todo el ancho disponible */
+  height: 200px; /* Ajusta la altura para que sea uniforme */
+  object-fit: cover; /* Asegura que las imágenes mantengan su proporción, pero se recorten para llenar el área */
+  border-radius: 8px;
+}
+
+
+.loguito {
+  height: auto;
+  width: 100%; /* Escalable a tamaño completo */
+  max-width: 270px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.btn-detalles {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-detalles:hover {
+  background-color: #2980b9;
+}
+
+/* Testimonials Section */
+.opiniones {
+  margin: 60px auto;
+  background-color: var(--secondary-color);
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.opiniones h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.opinion {
+  background-color: white;
+  margin-bottom: 30px;
+  padding: 25px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease; /* Añadido */
+}
+
+.opinion:hover {
+  transform: scale(1.02); /* Escalado al hacer hover */
+}
+
+.opinion img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 25px;
+  object-fit: cover;
+}
+
+.opinion-contenido {
+  flex: 1;
+}
+
+.opinion-nombre {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+/* Slogan Section */
+.slogan-contenido {
+  background-color: var(--primary-color);
+  padding: 4rem 2rem; /* Cambiado a unidades relativas */
+  text-align: center;
+  margin-top: 60px;
+  color: white;
+}
+
+.slogan-contenido h2 {
+  font-size: 2.25rem; /* Cambiado a rem para escalabilidad */
+  margin-bottom: 30px;
+}
+
+.slogan-imagen {
+  width: 100%;
+  max-width: 1000px;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .principal {
+    padding: 60px 20px;
+    font-size: 24px;
+  }
+
+  .cursos, .rutas {
+    gap: 20px;
+  }
+
+  .opinion {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .opinion img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 1200px) {
+  .loguito {
+    max-width: 300px; /* Escala para pantallas grandes */
+  }
+}
