@@ -53,9 +53,9 @@ body {
 
 /* Texto */
 #color-actual {
-font-size: 20px; /* Texto más pequeño */
-font-weight: bold;
-margin-bottom: 10px; /* Separación con el botón */
+  font-size: 20px; /* Texto más pequeño */
+  font-weight: bold;
+  margin-bottom: 10px; /* Separación con el botón */
 }
 
 /* Botón */
@@ -65,7 +65,7 @@ margin-bottom: 10px; /* Separación con el botón */
   border-radius: 10px;
   background-color: #008CBA;
   margin: 5px;
-  padding: 8px 20px;;
+  padding: 8px 20px;
   border: 3px solid #008CBA;
   user-select: none;
   cursor: pointer;
