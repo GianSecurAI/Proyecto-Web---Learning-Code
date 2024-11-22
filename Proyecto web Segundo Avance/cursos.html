@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="forms.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Cursos - Learning Code</title>
+</head>
+<body>
+  <header>
+    <div class="logo-empresa">
+      <img src="https://th.bing.com/th/id/OIG2.3whZJAaxQrhuJ3PclyyO?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="logo de empresa" class="logo-imagen">
+      <a href="index.html"><span>Learning Code</span></a>
+    </div>
+    <nav>
+      <a href="cursos.html">Cursos</a>
+      <a href="rutas.html">Rutas de Aprendizaje</a>
+      <a href="beneficios.html">Beneficios</a>
+      <a href="historia.html">Historia</a>
+      <a href="#">Acerca De</a>
+      <a href="#"><button class="btn-iniciar">Iniciar sesión</button></a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Cursos Disponibles</h1>
+
+    <!-- Lista de Cursos -->
+    <div id="lista-cursos">
+        <div class="curso" data-curso="javascript" id="javascript">
+          <h2>Curso de JavaScript</h2>
+        </div>
+        <div class="curso" data-curso="python" id="python">
+          <h2>Curso de Python</h2>
+        </div>
+        <div class="curso" data-curso="flutter" id="flutter">
+          <h2>Curso de Flutter</h2>
+        </div>
+      </div>
+      
+
+    <!-- Contenedor del contenido del curso -->
+    <div id="curso-contenido" class="oculto">
+      <h1 id="curso-titulo"></h1>
+      <p>Lista de temas del curso. Marca los completados o elimínalos.</p>
+      <div>
+        <input id="ingresar-tarea" type="text" placeholder="Agregar un nuevo tema" />
+        <button id="agregar-tarea">Agregar un nuevo Tema</button>
+      </div>
+      <div id="lista-de-tareas"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-section">
+      <h3>Learning Code</h3>
+      <p>Somos una empresa tecnológica especializada en el desarrollo de soluciones web.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Sitio</h3>
+      <ul>
+        <li>Nosotros</li>
+        <li>Contáctanos</li>
+        <li><a href="consultas.html">Consultas, quejas y/o reclamos</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Recursos</h3>
+      <ul>
+        <li>Cursos</li>
+        <li>Rutas de Aprendizaje</li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="tareas.js" defer></script>
+
+  
+</body>
+</html>

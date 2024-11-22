@@ -141,3 +141,11 @@
     padding: 0.625rem; /* Usar rem */
   }
 }
+.enlace-curso {
+  text-decoration: none; /* Eliminar subrayado */
+  color: inherit; /* Heredar el color del texto para que no cambie */
+  background: none; /* Sin fondo */
+  border: none; /* Sin bordes */
+  display: inline; /* Asegurar que no afecte al layout */
+  width: 100%; /* Asegurar que el área del enlace cubra toda la celda */
+}
