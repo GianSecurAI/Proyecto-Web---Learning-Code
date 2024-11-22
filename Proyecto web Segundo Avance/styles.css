@@ -76,3 +76,33 @@ margin-bottom: 10px; /* Separación con el botón */
   background-color: #05455A;
 }
 
+/* Contador Regresivo Section */
+.contador-regresivo {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 1300px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contador-regresivo h2 {
+  margin-bottom: 20px;
+}
+
+.tiempo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.tiempo div {
+  background-color: #005bb5;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: center;
+}

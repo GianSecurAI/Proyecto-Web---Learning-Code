@@ -38,3 +38,45 @@ boton.addEventListener('click', function () {
 
 // Llamar a la función para inicializar el color al cargar la página.
 cargarColorGuardado();
+
+function formatearTiempo(segundos) {
+  const dias = Math.floor(segundos / (24 * 60 * 60));
+  const horas = Math.floor((segundos % (24 * 60 * 60)) / (60 * 60));
+  const minutos = Math.floor((segundos % (60 * 60)) / 60);
+  const segundosRestantes = segundos % 60;
+
+  return `<div>${String(dias).padStart(2, '0')}<br>Días</div><div>${String(horas).padStart(2, '0')}<br>Horas</div><div>${String(minutos).padStart(2, '0')}<br>Minutos</div><div>${String(segundosRestantes).padStart(2, '0')}<br>Segundos</div>`;
+}
+
+function actualizarDisplay(tiempo) {
+  document.getElementById("tiempo").innerHTML = formatearTiempo(tiempo);
+}
+
+function calcularTiempoRestante() {
+  const ahora = new Date();
+  const proximoLanzamiento = new Date();
+
+  // Establecer el próximo viernes a las 3 PM
+  let diasHastaViernes = (5 - ahora.getDay() + 7) % 7 || 7; // Si hoy es viernes, sumar 7 días
+  proximoLanzamiento.setDate(ahora.getDate() + diasHastaViernes);
+  proximoLanzamiento.setHours(15, 0, 0, 0); // Establecer a las 3 PM
+
+  const diferencia = proximoLanzamiento - ahora;
+  return Math.floor(diferencia / 1000); // Convertir a segundos
+}
+
+function iniciarContador() {
+  let tiempoRestante = calcularTiempoRestante();
+  actualizarDisplay(tiempoRestante);
+
+  setInterval(() => {
+    tiempoRestante--;
+    if (tiempoRestante < 0) {
+      tiempoRestante = calcularTiempoRestante(); // Reiniciar el contador
+    }
+    actualizarDisplay(tiempoRestante);
+  }, 1000);
+}
+
+// Inicializar el contador al cargar la página
+window.onload = iniciarContador;
